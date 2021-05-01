@@ -1,0 +1,7 @@
+docker run --rm -p 27018:27017 -d -v myVol1:/data/db --name="dotnet-5-tutorial" -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret --network=net5tutorial mongo
+
+
+
+
+docker run -it --rm -p 8080:80 -e MongoDbSettings:Host=dotnet-5-tutorial -e MongoDbSettings:Password=secret -e MongoDbSettings:Port=27017 --network=net5tutorial ca
+talog:v1
